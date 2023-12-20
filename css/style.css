@@ -24,6 +24,9 @@ html,body {
 ul {
     list-style: none;
 }
+a {
+    transition: all .2s 50ms;
+}
 .flex {
     display: flex;
 }
@@ -94,7 +97,7 @@ ul {
 /* -----------main-------------- */
 main {
     max-width: 1310px; 
-    margin: 0 65px;
+    margin: 0 auto;
 }
 
 /* ------------First section "Always ready to code" */
@@ -171,11 +174,14 @@ main {
 }
 
 /* ---------------Second section "Select section, start coding" */
+.second__section {
+    margin: 160px auto 338px auto;
+}
 .second__section h2::first-line,
 .second__section h2:last-child {
     color: #12100C;
     text-align: center;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
@@ -189,9 +195,76 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 63.72px; /* 118% */
-    text-decoration-line: strikethrough;
+}
+.strikethrough-text {
+    color: #999795;
+    text-decoration: line-through;
 }
 
+/* --------------------------Third section "Think CI/CD for dev environments" */
+.third__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 66px;
+    margin: 178px 0;
+}
+.third__section .text-and-buttons h2{
+    color: #12100C;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    margin-bottom: 8px;
+}
+.third__section .text-and-buttons p {
+    color: rgba(18, 16, 12, 0.70);
+    font-family: Roboto;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.92px; /* 133% */
+}
+.third__section-buttons {
+    margin-top: 151px;
+}
+.third__section .orange-button {
+    text-align: center;
+    text-decoration: none;
+    width: 160px;
+    padding: .75rem 2rem;
+    border-radius: 10.5px; 
+    background: #FFAE33;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10);
+    color: #12100C;
+    font-family: Roboto;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+    margin-right: 10px;
+}
+.third__section .pink-button {
+    text-align: center;
+    text-decoration: none;
+    width: 160px;
+    padding: .75rem 2rem;
+    border-radius: 10.5px; 
+    background: #FFB0AE;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10); 
+    color: #12100C;
+    font-family: Roboto;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+}
+.third__section-image {
+    border-radius: 20px; 
+    flex-shrink: 0;
+}
 
 
 /* --------footer--------- */
