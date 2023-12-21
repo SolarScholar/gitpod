@@ -35,6 +35,9 @@
                     </defs>
                   </svg>
                 </a>
+                <button class="navbar-toggler" id="navbar-toggler" type="button">
+                    <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="2" rx="1" fill="#F4F2F1"></rect><rect y="6" width="16" height="2" rx="1" fill="#F3F1F0"></rect></svg>
+                </button>
                 <ul class="mainmenu__list">
                     <li class="mainmenu_item"><a class="menu_link" href="">Features</a></li>
                     <li class="mainmenu_item"><a class="menu_link" href="">Pricing</a></li>
@@ -116,7 +119,7 @@
         </section>
         <section class="section second__section">
             <h2>Select project,</br>
-                <span class="strikethrough-text">heck dependencies, checkout branch, view</span></br>
+                <span class="strikethrough-text">check dependencies, checkout branch, view</span></br>
                 <span class="strikethrough-text">readme.txt, install tools, run build, run test,</span></br>
                 start coding.</h2>
         </section>
@@ -257,5 +260,14 @@
             </section>
         </section>
     </footer>
+    <script type="text/javascript">
+        const btn = document.getElementById("navbar-toggler"); //выбрать элемент кнопку
+        const menus = document.querySelectorAll(".mainmenu__list"); //выбрать все меню
+        btn.addEventListener('click', () => {//когда пользователь кликнет на кнопке
+            for (let el of menus) { //перебрать все меню и к каждому
+                el.classList.toggle("show");//применить/убрать стиль show
+            }
+        })
+    </script>
 </body>
 </html>
